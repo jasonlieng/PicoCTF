@@ -1,0 +1,42 @@
+armstizzy-picoctf@webshell:~$ wget https://mercury.picoctf.net/static/1b247b1631eb377d9392bfa4871b2eb1/ende.py
+--2023-03-07 21:10:27--  https://mercury.picoctf.net/static/1b247b1631eb377d9392bfa4871b2eb1/ende.py
+Resolving mercury.picoctf.net (mercury.picoctf.net)... 18.189.209.142
+Connecting to mercury.picoctf.net (mercury.picoctf.net)|18.189.209.142|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 1328 (1.3K) [application/octet-stream]
+Saving to: 'ende.py'
+
+ende.py                                                             100%[=================================================================================================================================================================>]   1.30K  --.-KB/s    in 0s      
+
+2023-03-07 21:10:27 (704 MB/s) - 'ende.py' saved [1328/1328]
+
+armstizzy-picoctf@webshell:~$ wget https://mercury.picoctf.net/static/1b247b1631eb377d9392bfa4871b2eb1/pw.txt
+--2023-03-07 21:11:04--  https://mercury.picoctf.net/static/1b247b1631eb377d9392bfa4871b2eb1/pw.txt
+Resolving mercury.picoctf.net (mercury.picoctf.net)... 18.189.209.142
+Connecting to mercury.picoctf.net (mercury.picoctf.net)|18.189.209.142|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 33 [application/octet-stream]
+Saving to: 'pw.txt'
+
+pw.txt                                                              100%[=================================================================================================================================================================>]      33  --.-KB/s    in 0s      
+
+2023-03-07 21:11:04 (15.2 MB/s) - 'pw.txt' saved [33/33]
+
+armstizzy-picoctf@webshell:~$ wget https://mercury.picoctf.net/static/1b247b1631eb377d9392bfa4871b2eb1/flag.txt.en
+--2023-03-07 21:11:15--  https://mercury.picoctf.net/static/1b247b1631eb377d9392bfa4871b2eb1/flag.txt.en
+Resolving mercury.picoctf.net (mercury.picoctf.net)... 18.189.209.142
+Connecting to mercury.picoctf.net (mercury.picoctf.net)|18.189.209.142|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 140 [application/octet-stream]
+Saving to: 'flag.txt.en'
+
+flag.txt.en                                                         100%[=================================================================================================================================================================>]     140  --.-KB/s    in 0s      
+
+2023-03-07 21:11:15 (65.0 MB/s) - 'flag.txt.en' saved [140/140]
+
+armstizzy-picoctf@webshell:~$ cat pw.txt
+dbd1bea4dbd1bea4dbd1bea4dbd1bea4
+
+armstizzy-picoctf@webshell:~$ python3 ende.py -d  flag.txt.en 
+Please enter the password:dbd1bea4dbd1bea4dbd1bea4dbd1bea4
+picoCTF{4p0110_1n_7h3_h0us3_dbd1bea4}
