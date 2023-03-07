@@ -1,0 +1,37 @@
+armstizzy-picoctf@webshell:~$ wget https://mercury.picoctf.net/static/3afd18a65e42b80526aa87f9766c588b/Addadshashanammu.zip
+--2023-03-07 22:48:41--  https://mercury.picoctf.net/static/3afd18a65e42b80526aa87f9766c588b/Addadshashanammu.zip
+Resolving mercury.picoctf.net (mercury.picoctf.net)... 18.189.209.142
+Connecting to mercury.picoctf.net (mercury.picoctf.net)|18.189.209.142|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 4520 (4.4K) [application/octet-stream]
+Saving to: 'Addadshashanammu.zip'
+
+Addadshashanammu.zip                                                100%[=================================================================================================================================================================>]   4.41K  --.-KB/s    in 0s      
+
+2023-03-07 22:48:41 (1.78 GB/s) - 'Addadshashanammu.zip' saved [4520/4520]
+
+armstizzy-picoctf@webshell:~$ unzip Addadshashanammu.zip 
+Archive:  Addadshashanammu.zip
+   creating: Addadshashanammu/
+   creating: Addadshashanammu/Almurbalarammi/
+   creating: Addadshashanammu/Almurbalarammi/Ashalmimilkala/
+   creating: Addadshashanammu/Almurbalarammi/Ashalmimilkala/Assurnabitashpi/
+   creating: Addadshashanammu/Almurbalarammi/Ashalmimilkala/Assurnabitashpi/Maelkashishi/
+   creating: Addadshashanammu/Almurbalarammi/Ashalmimilkala/Assurnabitashpi/Maelkashishi/Onnissiralis/
+   creating: Addadshashanammu/Almurbalarammi/Ashalmimilkala/Assurnabitashpi/Maelkashishi/Onnissiralis/Ularradallaku/
+  inflating: Addadshashanammu/Almurbalarammi/Ashalmimilkala/Assurnabitashpi/Maelkashishi/Onnissiralis/Ularradallaku/fang-of-haynekhtnamet  
+armstizzy-picoctf@webshell:~$ ls
+Addadshashanammu  Addadshashanammu.zip  README.txt  ende.py  flag.txt.en  ltdis.sh  pw.txt  static  static.ltdis.strings.txt  static.ltdis.x86_64.txt  warm
+armstizzy-picoctf@webshell:~$ cd 
+armstizzy-picoctf@webshell:~$ cd Addadshashanammu/
+armstizzy-picoctf@webshell:~/Addadshashanammu$ cd Almurbalarammi/
+armstizzy-picoctf@webshell:~/Addadshashanammu/Almurbalarammi$ cd Ashalmimilkala/
+armstizzy-picoctf@webshell:~/Addadshashanammu/Almurbalarammi/Ashalmimilkala$ cd Assurnabitashpi/
+armstizzy-picoctf@webshell:~/Addadshashanammu/Almurbalarammi/Ashalmimilkala/Assurnabitashpi$ cd Maelkashishi/
+armstizzy-picoctf@webshell:~/Addadshashanammu/Almurbalarammi/Ashalmimilkala/Assurnabitashpi/Maelkashishi$ cd Onnissiralis/
+armstizzy-picoctf@webshell:~/Addadshashanammu/Almurbalarammi/Ashalmimilkala/Assurnabitashpi/Maelkashishi/Onnissiralis$ cd Ularradallaku/
+armstizzy-picoctf@webshell:~/Addadshashanammu/Almurbalarammi/Ashalmimilkala/Assurnabitashpi/Maelkashishi/Onnissiralis/Ularradallaku$ cat fang-of-haynekhtnamet 
+armstizzy-picoctf@webshell:~/Addadshashanammu/Almurbalarammi/Ashalmimilkala/Assurnabitashpi/Maelkashishi/Onnissiralis/Ularradallaku$ ls
+fang-of-haynekhtnamet
+armstizzy-picoctf@webshell:~/Addadshashanammu/Almurbalarammi/Ashalmimilkala/Assurnabitashpi/Maelkashishi/Onnissiralis/Ularradallaku$ ./fang-of-haynekhtnamet 
+*ZAP!* picoCTF{l3v3l_up!_t4k3_4_r35t!_d32e018c}
