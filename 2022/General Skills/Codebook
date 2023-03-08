@@ -1,0 +1,26 @@
+armstizzy-picoctf@webshell:~$ wget https://artifacts.picoctf.net/c/101/code.py
+--2023-03-08 19:38:40--  https://artifacts.picoctf.net/c/101/code.py
+Resolving artifacts.picoctf.net (artifacts.picoctf.net)... 108.156.172.74, 108.156.172.42, 108.156.172.6, ...
+Connecting to artifacts.picoctf.net (artifacts.picoctf.net)|108.156.172.74|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 1278 (1.2K) [application/octet-stream]
+Saving to: 'code.py'
+
+code.py                                                             100%[=================================================================================================================================================================>]   1.25K  --.-KB/s    in 0s      
+
+2023-03-08 19:38:40 (58.6 MB/s) - 'code.py' saved [1278/1278]
+
+armstizzy-picoctf@webshell:~$ wget https://artifacts.picoctf.net/c/101/codebook.txt
+--2023-03-08 19:38:52--  https://artifacts.picoctf.net/c/101/codebook.txt
+Resolving artifacts.picoctf.net (artifacts.picoctf.net)... 108.156.172.42, 108.156.172.120, 108.156.172.74, ...
+Connecting to artifacts.picoctf.net (artifacts.picoctf.net)|108.156.172.42|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 27 [application/octet-stream]
+Saving to: 'codebook.txt'
+
+codebook.txt                                                        100%[=================================================================================================================================================================>]      27  --.-KB/s    in 0s      
+
+2023-03-08 19:38:52 (14.9 MB/s) - 'codebook.txt' saved [27/27]
+
+armstizzy-picoctf@webshell:~$ python3 code.py
+picoCTF{c0d3b00k_455157_7d102d7a}
