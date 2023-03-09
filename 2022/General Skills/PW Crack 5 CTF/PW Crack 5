@@ -1,0 +1,52 @@
+armstizzy-picoctf@webshell:~$ wget https://artifacts.picoctf.net/c/79/level5.py
+--2023-03-09 04:56:24--  https://artifacts.picoctf.net/c/79/level5.py
+Resolving artifacts.picoctf.net (artifacts.picoctf.net)... 108.156.172.42, 108.156.172.74, 108.156.172.120, ...
+Connecting to artifacts.picoctf.net (artifacts.picoctf.net)|108.156.172.42|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 1168 (1.1K) [application/octet-stream]
+Saving to: 'level5.py'
+
+level5.py                                                           100%[=================================================================================================================================================================>]   1.14K  --.-KB/s    in 0s      
+
+2023-03-09 04:56:24 (52.4 MB/s) - 'level5.py' saved [1168/1168]
+
+armstizzy-picoctf@webshell:~$ wget https://artifacts.picoctf.net/c/79/level5.flag.txt.enc
+--2023-03-09 04:56:39--  https://artifacts.picoctf.net/c/79/level5.flag.txt.enc
+Resolving artifacts.picoctf.net (artifacts.picoctf.net)... 108.156.172.42, 108.156.172.120, 108.156.172.6, ...
+Connecting to artifacts.picoctf.net (artifacts.picoctf.net)|108.156.172.42|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 31 [application/octet-stream]
+Saving to: 'level5.flag.txt.enc'
+
+level5.flag.txt.enc                                                 100%[=================================================================================================================================================================>]      31  --.-KB/s    in 0s      
+
+2023-03-09 04:56:40 (1.32 MB/s) - 'level5.flag.txt.enc' saved [31/31]
+
+armstizzy-picoctf@webshell:~$ wget https://artifacts.picoctf.net/c/79/level5.hash.bin
+--2023-03-09 04:56:50--  https://artifacts.picoctf.net/c/79/level5.hash.bin
+Resolving artifacts.picoctf.net (artifacts.picoctf.net)... 108.156.172.42, 108.156.172.120, 108.156.172.6, ...
+Connecting to artifacts.picoctf.net (artifacts.picoctf.net)|108.156.172.42|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 16 [application/octet-stream]
+Saving to: 'level5.hash.bin'
+
+level5.hash.bin                                                     100%[=================================================================================================================================================================>]      16  --.-KB/s    in 0s      
+
+2023-03-09 04:56:50 (842 KB/s) - 'level5.hash.bin' saved [16/16]
+
+armstizzy-picoctf@webshell:~$ wget https://artifacts.picoctf.net/c/79/dictionary.txt
+--2023-03-09 04:57:00--  https://artifacts.picoctf.net/c/79/dictionary.txt
+Resolving artifacts.picoctf.net (artifacts.picoctf.net)... 108.156.172.74, 108.156.172.6, 108.156.172.42, ...
+Connecting to artifacts.picoctf.net (artifacts.picoctf.net)|108.156.172.74|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 327680 (320K) [application/octet-stream]
+Saving to: 'dictionary.txt'
+
+dictionary.txt                                                      100%[=================================================================================================================================================================>] 320.00K  1.84MB/s    in 0.2s    
+
+2023-03-09 04:57:01 (1.84 MB/s) - 'dictionary.txt' saved [327680/327680]
+
+armstizzy-picoctf@webshell:~$ nano level5.py
+armstizzy-picoctf@webshell:~$ python3 level5.py
+Welcome back... your flag, user:
+picoCTF{h45h_sl1ng1ng_36e992a6}
