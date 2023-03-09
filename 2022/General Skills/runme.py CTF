@@ -1,0 +1,14 @@
+armstizzy-picoctf@webshell:~$ wget https://artifacts.picoctf.net/c/86/runme.py
+--2023-03-09 05:19:39--  https://artifacts.picoctf.net/c/86/runme.py
+Resolving artifacts.picoctf.net (artifacts.picoctf.net)... 108.156.172.42, 108.156.172.120, 108.156.172.6, ...
+Connecting to artifacts.picoctf.net (artifacts.picoctf.net)|108.156.172.42|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 270 [application/octet-stream]
+Saving to: 'runme.py'
+
+runme.py                                                            100%[=================================================================================================================================================================>]     270  --.-KB/s    in 0s      
+
+2023-03-09 05:19:39 (15.3 MB/s) - 'runme.py' saved [270/270]
+
+armstizzy-picoctf@webshell:~$ python3 runme.py
+picoCTF{run_s4n1ty_run}
