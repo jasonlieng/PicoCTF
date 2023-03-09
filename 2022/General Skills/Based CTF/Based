@@ -1,0 +1,17 @@
+armstizzy-picoctf@webshell:~$ nc jupiter.challenges.picoctf.org 29221
+Let us see how data is stored
+sludge
+Please give the 01110011 01101100 01110101 01100100 01100111 01100101 as a word.
+...
+you have 45 seconds.....
+
+Input:
+sludge
+Please give me the  141 156 151 155 141 164 151 157 156 as a word.
+Input:
+animation
+Please give me the 6e75727365 as a word.
+Input:
+nurse
+You've beaten the challenge
+Flag: picoCTF{learning_about_converting_values_00a975ff}
