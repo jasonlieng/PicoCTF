@@ -1,0 +1,96 @@
+flag_enc = open('level3.flag.txt.enc', 'rb').read()
+correct_pw_hash = open('level3.hash.bin', 'rb').read()
+
+
+def hash_pw(pw_str):
+    pw_bytes = bytearray()
+    pw_bytes.extend(pw_str.encode())
+    m = hashlib.md5()
+    m.update(pw_bytes)
+    return m.digest()
+
+
+def level_3_pw_check():
+#deleted previous variables to replace with pos_pw_list and x
+    pos_pw_list = ["f09e", "4dcf", "87ab", "dba8", "752e", "3961", "f159"]
+    #for loop starts here
+    for x in pos_pw_list:
+        user_pw_hash = hash_pw(x)
+    
+        if( user_pw_hash == correct_pw_hash ):
+            print("Welcome back... your flag, user:")
+            decryption = str_xor(flag_enc.decode(), x)
+            print(decryption)
+            return
+    print("That password is incorrect")
+
+
+level_3_pw_check()
+
+
+# The strings below are 7 possibilities for the correct password. 
+#   (Only 1 is correct)
+pos_pw_list = ["f09e", "4dcf", "87ab", "dba8", "752e", "3961", "f159"]
+
+
+armstizzy-picoctf@webshell:~$ wget https://artifacts.picoctf.net/c/24/level3.py
+--2023-03-09 04:10:44--  https://artifacts.picoctf.net/c/24/level3.py
+Resolving artifacts.picoctf.net (artifacts.picoctf.net)... 108.156.172.120, 108.156.172.6, 108.156.172.74, ...
+Connecting to artifacts.picoctf.net (artifacts.picoctf.net)|108.156.172.120|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 1337 (1.3K) [application/octet-stream]
+Saving to: 'level3.py'
+
+level3.py                                                           100%[=================================================================================================================================================================>]   1.31K  --.-KB/s    in 0s      
+
+2023-03-09 04:10:44 (572 MB/s) - 'level3.py' saved [1337/1337]
+
+armstizzy-picoctf@webshell:~$ wget https://artifacts.picoctf.net/c/24/level3.flag.txt.enc
+--2023-03-09 04:10:55--  https://artifacts.picoctf.net/c/24/level3.flag.txt.enc
+Resolving artifacts.picoctf.net (artifacts.picoctf.net)... 108.156.172.74, 108.156.172.120, 108.156.172.42, ...
+Connecting to artifacts.picoctf.net (artifacts.picoctf.net)|108.156.172.74|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 31 [application/octet-stream]
+Saving to: 'level3.flag.txt.enc'
+
+level3.flag.txt.enc                                                 100%[=================================================================================================================================================================>]      31  --.-KB/s    in 0s      
+
+2023-03-09 04:10:55 (14.1 MB/s) - 'level3.flag.txt.enc' saved [31/31]
+
+armstizzy-picoctf@webshell:~$ wget https://artifacts.picoctf.net/c/24/level3.hash.bin
+--2023-03-09 04:11:07--  https://artifacts.picoctf.net/c/24/level3.hash.bin
+Resolving artifacts.picoctf.net (artifacts.picoctf.net)... 108.156.172.42, 108.156.172.6, 108.156.172.74, ...
+Connecting to artifacts.picoctf.net (artifacts.picoctf.net)|108.156.172.42|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 16 [application/octet-stream]
+Saving to: 'level3.hash.bin'
+
+level3.hash.bin                                                     100%[=================================================================================================================================================================>]      16  --.-KB/s    in 0s      
+
+2023-03-09 04:11:07 (13.8 MB/s) - 'level3.hash.bin' saved [16/16]
+
+armstizzy-picoctf@webshell:~$ nano level3.py           
+armstizzy-picoctf@webshell:~$ python3 level3.py
+Please enter correct password for flag: f09e
+That password is incorrect
+armstizzy-picoctf@webshell:~$ python3 level3.py
+Please enter correct password for flag: 4dcf
+That password is incorrect
+armstizzy-picoctf@webshell:~$ python3 level3.py
+Please enter correct password for flag: 87ab
+That password is incorrect
+armstizzy-picoctf@webshell:~$ python3 level3.py
+Please enter correct password for flag: dba8
+Welcome back... your flag, user:
+picoCTF{m45h_fl1ng1ng_cd6ed2eb}
+
+armstizzy-picoctf@webshell:~$ nano level3.py
+armstizzy-picoctf@webshell:~$ python3 level3.py
+  File "/home/armstizzy-picoctf/level3.py", line 28
+    pos_pw_list = ["f09e", "4dcf", "87ab", "dba8", "752e", "3961", "f159"]
+    ^
+IndentationError: expected an indented block after function definition on line 26
+armstizzy-picoctf@webshell:~$ nano level3.py
+armstizzy-picoctf@webshell:~$ python3 level3.py
+Welcome back... your flag, user:
+picoCTF{m45h_fl1ng1ng_cd6ed2eb}
