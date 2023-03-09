@@ -1,0 +1,18 @@
+armstizzy-picoctf@webshell:~$ wget https://artifacts.picoctf.net/c/554/big-zip-files.zip
+--2023-03-09 05:45:18--  https://artifacts.picoctf.net/c/554/big-zip-files.zip
+Resolving artifacts.picoctf.net (artifacts.picoctf.net)... 108.156.172.74, 108.156.172.120, 108.156.172.42, ...
+Connecting to artifacts.picoctf.net (artifacts.picoctf.net)|108.156.172.74|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 3182988 (3.0M) [application/octet-stream]
+Saving to: 'big-zip-files.zip'
+
+big-zip-files.zip                                                 100%[=================================================================================================================================================================>]   3.04M  1.81MB/s    in 1.7s    
+
+2023-03-09 05:45:20 (1.81 MB/s) - 'big-zip-files.zip' saved [3182988/3182988]
+
+armstizzy-picoctf@webshell:~$ unzip big-zip-files.zip 
+armstizzy-picoctf@webshell:~$ cd big-zip-files/
+armstizzy-picoctf@webshell:~/big-zip-files$ grep -r pico
+folder_pmbymkjcya/folder_cawigcwvgv/folder_ltdayfmktr/folder_fnpfclfyee/whzxrpivpqld.txt:information on the record will last a billion years. Genes and brains and books encode picoCTF{gr3p_15_m4g1c_ef8790dc}
+
+Flag: picoCTF{gr3p_15_m4g1c_ef8790dc}
