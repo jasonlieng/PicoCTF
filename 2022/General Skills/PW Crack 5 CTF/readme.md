@@ -12,3 +12,6 @@ for x in pw_list:
     user_pw_hash = hash_pw(y)
     
 cleared user_pw in decryption = str_xpr(flag_enc.decode(), user_pw) replace with y
+
+Make sure the have everything under the for loop indented enough to be included in the for loop
+Caused issue by ending the loop at the last entry of the dictionary.txt and wasn't able to return to continue loop
