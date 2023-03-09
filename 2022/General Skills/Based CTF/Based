@@ -1,6 +1,5 @@
 armstizzy-picoctf@webshell:~$ nc jupiter.challenges.picoctf.org 29221
 Let us see how data is stored
-sludge
 Please give the 01110011 01101100 01110101 01100100 01100111 01100101 as a word.
 ...
 you have 45 seconds.....
